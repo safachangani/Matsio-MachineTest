@@ -9,8 +9,10 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <title>Matsio</title>
 </head>
 
@@ -19,17 +21,19 @@
         <div class="top-bar">
             <div class="container top-inner">
                 <div class="top-left">
-                    <span class="item"><i class="fa-solid fa-phone  icon-solid night"></i> 087 245 0049/01 8137811</span>
+                    <span class="item"><i class="fa-solid fa-phone  icon-solid night"></i> 087 245 0049/01
+                        8137811</span>
                     <span class="divider">|</span>
                     <span class="item"><i class="fa-solid fa-envelope icon-solid day"></i> contact@sample.ie</span>
                     <span class="divider">|</span>
-                    <span class="item"><i class="fa-regular fa-clock icon-solid day"></i> Mon-Thu: 8:00 am to 9:00 pm</span>
+                    <span class="item"><i class="fa-regular fa-clock icon-solid day"></i> Mon-Thu: 8:00 am to 9:00
+                        pm</span>
                 </div>
 
                 <div class="top-right">
                     <a href="http://"><i class="fa-brands fa-facebook social-icon"></i></a>
-                    <a href="http://"><i class="fa-brands fa-twitter social-icon night" ></i></a>
-                    <a href="http://"><i class="fa-brands fa-linkedin-in social-icon"></i></a> 
+                    <a href="http://"><i class="fa-brands fa-twitter social-icon night"></i></a>
+                    <a href="http://"><i class="fa-brands fa-linkedin-in social-icon"></i></a>
                 </div>
             </div>
         </div>
@@ -38,8 +42,8 @@
                 <a href="/" class="logo">
                     <img src="./assets/logo.png" alt="" srcset="" class="matsio-logo">
                 </a>
-
-                <ul class="nav-links">
+                <div id="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+                <ul class="nav-links" id="nav-links">
                     <li>Home</li>
                     <li>Services</li>
                     <li>About Us</li>
@@ -53,12 +57,16 @@
         <main>
             <section class="hero-section">
                 <div class="container">
+
+
                     <div class="hero-text">
+
                         <h1>Take The Right Step For Your Business</h1>
                         <p>TAx Associate is a leading consultancy firm
                             that provides simple, effective company registration,
                             and accounting solutions to enterprises in Ireland.</p>
-                        <a href="http://" class="get-started">Get Started</a>
+                        <a href="/index.html" class="get-started">Get Started</a>
+
                     </div>
                     <div class="hero-form">
                         <h4>Apply For Tax Rebate Now</h4>
@@ -75,14 +83,16 @@
                                 <label for="ppsnumber">PPS Number</label>
                                 <input type="text" name="ppsnumber" id="ppsnumber">
                             </div>
-                            <div class="form-group checkbox-group">
-                                <label for="name">
+                            <div class="form-group ">
+                                <label for="name" class="checkbox-group">
                                     <input type="checkbox" name="agreement" id="agreement" required>
-                                    I have read & agreed to the authorisation
-                                    and the terms & conditions.
+                                    <p>I have read & agreed to the authorisation
+                                        and the <a class="terms-link">terms & conditions.</a></p>
                                 </label>
                             </div>
-                            <button type="button" class="cta-button">Apply →</button>
+                            <button type="submit" class="cta-button">Apply <i
+                                    class="fa-solid fa-circle-right"></i></button>
+                            <p id="success-message">You Applied Successfully</p>
                         </form>
                     </div>
                 </div>
@@ -110,7 +120,52 @@
                 </div>
             </section>
         </main>
+        <footer>
+            <div class="bottom-bar">
+                <div class="container bottom-inner">
+                    <div class="bottom-left">
+                        <span class="item"><i class="fa-solid fa-phone  icon-solid night"></i> 087 245 0049/01
+                            8137811</span>
+                        <span class="item"><i class="fa-solid fa-envelope icon-solid day"></i> contact@sample.ie</span>
+                        <span class="item"><i class="fa-regular fa-clock icon-solid day"></i> Mon-Thu: 8:00 am to 9:00
+                            pm</span>
+                    </div>
+
+                    <div class="bottom-right">
+                        <a href="http://"><i class="fa-brands fa-facebook social-icon"></i></a>
+                        <a href="http://"><i class="fa-brands fa-twitter social-icon night"></i></a>
+                        <a href="http://"><i class="fa-brands fa-linkedin-in social-icon"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
+<script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links')
+    const links = document.querySelectorAll('li');
+    const form = document.querySelector('form');
+    const successMessage = document.getElementById("success-message")
+
+    toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("open")
+
+    })
+    links.forEach((link) => {
+
+        link.addEventListener("click", () => {
+            console.log("clicked");
+
+            navLinks.classList.remove('open')
+        })
+    })
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        form.reset();
+        successMessage.style.display = 'block'
+    })
+
+</script>
 
 </html>
