@@ -252,31 +252,42 @@ form input[type='checkbox'] {
 }
 
 .service-section .container {
-    padding: 4rem 0;
-    flex-wrap: wrap;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+     flex-wrap: wrap;
+     gap: 2rem;
 }
 
 .service-card {
     display: flex;
     flex-direction: column;
-    width: 25%;
-    gap: .5rem;
+    gap: 1rem;
+    flex: 1 1 calc(33.3% - 2rem);
 }
 
 .icon {
     background-color: #40A5A2;
     margin-right: auto;
     border-radius: 50%;
-    padding: .55rem .2rem;
+    width: 64px;
+    height: 64px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
 }
-
-.icon img {
-    width: 50%;
-    height: 50%;
+#startup{
+    width:29.48px ;
+    height:40px ;
 }
-
+#finance{
+    width: 34px;
+    height:34px ;
+}
+#risk{
+    width: 29.5px;
+    height:34px ;
+}
 .service-card h4 {
     color: #163651;
     font-size: 1.25rem;
@@ -314,8 +325,21 @@ footer {
 
     .icon {
         margin-right: 0;
+        width: 50px;
+        height: 50px;
     }
-
+    #startup{
+        width: 22px;
+        height: 30px;
+    }
+    #finance{
+        width: 26px;
+        height: 26px;
+    }
+    #risk{
+        width: 22px;
+        height:26px ;
+    }
     .hero-section {
         background-image: none;
         padding: 0;
