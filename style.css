@@ -9,11 +9,11 @@
 nav {
     display: flex;
     max-width: 1200px;
-    margin:0 auto;
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     padding-inline: .5rem;
-   
+
 }
 
 .top-bar {
@@ -23,8 +23,8 @@ nav {
 }
 
 .top-inner {
-   padding-top: .5rem;
-    padding-bottom: .5rem; 
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 .top-left {
@@ -88,7 +88,7 @@ a {
 }
 
 nav {
-    padding-top: 1rem ;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -254,8 +254,8 @@ form input[type='checkbox'] {
 .service-section .container {
     padding-top: 4rem;
     padding-bottom: 4rem;
-     flex-wrap: wrap;
-     gap: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .service-card {
@@ -276,18 +276,22 @@ form input[type='checkbox'] {
     align-items: center;
     margin-bottom: .5rem;
 }
-#startup{
-    width:29.48px ;
-    height:40px ;
+
+#startup {
+    width: 29.48px;
+    height: 40px;
 }
-#finance{
+
+#finance {
     width: 34px;
-    height:34px ;
+    height: 34px;
 }
-#risk{
+
+#risk {
     width: 29.5px;
-    height:34px ;
+    height: 34px;
 }
+
 .service-card h4 {
     color: #163651;
     font-size: 1.25rem;
@@ -328,18 +332,22 @@ footer {
         width: 50px;
         height: 50px;
     }
-    #startup{
+
+    #startup {
         width: 22px;
         height: 30px;
     }
-    #finance{
+
+    #finance {
         width: 26px;
         height: 26px;
     }
-    #risk{
+
+    #risk {
         width: 22px;
-        height:26px ;
+        height: 26px;
     }
+
     .hero-section {
         background-image: none;
         padding: 0;
